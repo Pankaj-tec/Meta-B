@@ -1,0 +1,577 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- google font family link -->
+  <title>Meta Blogs Template</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="bg-white dark:bg-[#181A2A]">
+  <div class="dark:bg-[#181A2A]">
+    <header
+      class="max-w-[1250px] size-full px-[1rem]  mx-auto my-[1rem] md:my-[2rem] relative dark:bg-[#181A2A] dark:text-white">
+      <div class=" md:flex-row flex  items-center justify-between gap-1 sm:gap-[1rem] relative">
+        <a href="./index.html"
+          class="self-start flex md:flex justify-center items-center gap-[2px] sm:gap-[10px] font-Work-Sans order-1 md:order-1">
+          <div>
+            <img src="./assets/images/logo.svg" alt="logo"
+              class="max-w-[28px] sm:max-w-[36px] block  h-auto  dark:rounded-[50%]  dark:bg-white">
+          </div>
+          <h3 class="sm:text-xl">Meta<span class="font-semibold">Blog</span></h3>
+        </a>
+        <nav class="order-3  md:order-2">
+          <ul
+            class="navbar gap-[20px] md:gap-[30px] lg:gap-[40px] flex-col flex md:items-center md:justify-between md:flex-row md:nav dark:dark:bg-[#181A2A]"
+            id="menu">
+            <li>
+              <a href="./index.html" class="hover:text-blue-500 font-Work-Sans text-base font-normal">Home</a>
+            </li>
+            <li>
+              <a href="./blog.html" class="hover:text-blue-500 font-Work-Sans text-base font-normal	">Blog</a>
+            </li>
+            <li>
+              <a href="./single-post.html" class="hover:text-blue-500 font-Work-Sans text-base font-normal">Single
+                Post</a>
+            </li>
+            <li>
+              <a href="#post" class="hover:text-blue-500 font-Work-Sans text-base font-normal	">Pages</a>
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-blue-500 font-Work-Sans text-base font-normal">Contact</a>
+            </li>
+            <li>
+              <div
+                class="flex items-center justify-between gap-[4px] sm:gap-[10px] px-[1rem] py-[0.5rem] bg-tertiary-color rounded-[6px] md:hidden">
+                <input type="search" name="" id="" placeholder="search"
+                  class="bg-tertiary-color outline-none border-none text-light-gray text-xs	sm:text-sm	font-normal w-[100%]">
+                <div>
+                  <img src="./assets/images/search-icon.svg" alt="search" class="max-w-[16px] h-auto">
+                </div>
+              </div>
+            </li>
+
+            <!-- close icon  -->
+            <div class=" top-[6px] right-[40px] absolute md:static  hidden cursor-pointer order-5" id="close">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </div>
+          </ul>
+        </nav>
+        <!-- search bar and toggle -->
+        <div
+          class=" flex-grow-[50] md:flex-grow-0  flex justify-end lg:justify-between items-center gap-[4px] sm:gap-[20px] md:gap-[20px] lg:gap-[42px] order-2  md:order-3 ">
+          <div
+            class="md:flex items-center justify-between gap-[4px] sm:gap-[10px] px-[1rem] py-[0.5rem] bg-tertiary-color rounded-[6px] hidden">
+            <input type="search" name="" id="" placeholder="search"
+              class="bg-tertiary-color outline-none border-none text-light-gray text-xs	sm:text-sm	font-normal w-[100%]">
+            <div>
+              <img src="./assets/images/search-icon.svg" alt="search" class="max-w-[16px] h-auto">
+            </div>
+          </div>
+          <div>
+            <label class="relative flex items-center cursor-pointer">
+              <input type="checkbox" value="" class="sr-only peer mode"
+                onclick="(() => document.body.classList.toggle('dark'))()" id="mode">
+              <div
+                class="w-[48px] h-[23px] bg-gray-200 hover:bg-gray-300 peer-focus:outline-0 
+            peer-focus:ring-transparent rounded-full peer transition-all ease-in-out 
+            duration-00 peer-checked:after:translate-x-full peer-checked
+            after:content-[''] after:inline-block :after:absolute after:top-[4px] after:left-[5px]after:
+             after:rounded-full after:h-[24px] after:w-[24px]  after:transition-all after: peer-checked:bg-indigo-600 hover:peer-checked:bg-indigo-700 after:bg-[url('./assets/images/toggle.svg')] after:bg-no-repeat after:bg-cover">
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- bar icon -->
+        <div class="cursor-pointer md:hidden order-4 " id="bar">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <!-- hero sec -->
+    <section>
+      <div class="sm:max-w-[1250px] size-full mx-auto px-[1rem] relative mb-[3rem]  sm:mb-[144px]">
+        <div class="max-w-[1248px] size-full px-[2px]">
+          <img src="./assets/images/hero.webp" alt="hero" class="aspect-[10/5] w-[100%] block">
+        </div>
+        <div
+          class="shadow-md sm:dark:bg-[#181A2A] dark:border-[#242535] dark:text-white max-w-[90%] sm:bg-white  p-[4px] bottom-[0.5rem] left-[1.5rem] sm:max-w-[450px] md:max-w-[598px]  sm:p-[1.25rem] md:p-[30px] lg:p-[40px] flex flex-col items-start absolute sm:bottom-[-4rem] sm:left-[3rem] md:left-[4rem] rounded-[12px]">
+          <h3
+            class="bg-blue-600 text-white  px-[8px] sm:px-[10px] py-[2px] sm:py-[4px] rounded-[6px] mb-[2px] sm:mb-[8px] md:mb-[1rem] font-medium text-xs sm:text-sm  font-Work-Sans">
+            Technology</h3>
+          <h1
+            class=" text-white sm:text-inherit text-base sm:text-lg	md:text-2xl	 lg:text-4xl	font-normal	 sm:font-semibold leading-5 sm:leading-6 md:leading-8 lg:leading-9 mb-[px] sm:mb-[1rem]	md:mb-[1.5rem] font-Work-Sans">
+            The Impact of
+            Technology on
+            the Workplace:
+            How Technology
+            is
+            Changing</h1>
+          <div class="flex items-center gap-[1rem] sm:gap-[1.25rem]">
+            <div class="flex items-center gap-[12px]">
+              <div>
+                <img src="./assets/images/jason.svg" alt="author">
+              </div>
+              <h5 class="text-[#97989F] font-medium	sm:text-base font-Work-Sans text-xs">Jason Francisco</h5>
+            </div>
+            <p class="font-Work-Sans text-xs sm:text-base font-normal text-[#97989F]">August 20, 2022</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner sec -->
+    <section>
+      <div class="px-[1rem] max-w-[750px] size-full m-auto mb-[3rem] md:mb-[80px]">
+        <div
+          class="banner flex items-center justify-center border  flex-col p-[15px] bg-secondry rounded-[12px] dark:bg-[#242535] dark:border-none">
+          <p class=" text-xs md:text-sm font-normal leading-5	font-Work-Sans text-[#696A75] ">Advertisement</p>
+          <h3
+            class="text-base sm:text-lg md:text-xl font-semibold leading-5 sm:leading-6	font-Work-Sans text-[#696A75]">
+            You can place ads</h3>
+          <h5 class="text-sm sm:text-base md:text-lg font-normal leading-6 sm:leading-7 font-Work-Sans text-[#696A75]">
+            750x100</h5>
+        </div>
+      </div>
+    </section>
+    <!-- latest post section -->
+    <section class=" dark:bg-[#181A2A] dark:text-white" id="post">
+      <div class="latest max-w-[1250px] px-[1rem] mx-auto mb-[3rem] md:mb-[80px]">
+        <h3 class="text-2xl	font-bold	leading-7 mb-[0.75rem] sm:mb-[1rem] md:mb-[2rem] font-Work-Sans">Latest Post</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[1rem] md:gap-[1rem] lg:gap-[1.25rem] mb-[2rem]">
+
+          <a href="./single-post.html"
+            class="p-[0.75rem] sm:p-[1rem]  lg:max-w-[396px] max-w-[396px] mx-auto  size-full border rounded-[12px]  hover:shadow-2xl hover:border-transparent  transform transition duration-700  dark:bg-[#181A2A] dark:text-white dark:border-[#242535] dark:hover:border-white">
+            <div class="mb-[1rem]">
+              <img src="./assets/images/card1.webp" alt=""
+                class=" lg:max-w-[360px] max-w-[100%] size-full block object-contain h-auto">
+            </div>
+            <div class="p-[0.5rem] flex flex-col items-start dark:bg-[#181A2A] dark:text-white">
+              <p
+                class="text-blue-600 rounded-[6px] bg-slate-100 px-[10px] py-[4px] text-xs sm:text-sm font-Work-Sans	font-medium	leading-5	mb-[8px] sm:mb-[1rem] dark:bg-[#4B6BFB] dark:bg-opacity-[5%]">
+                Technology</p>
+              <h3
+                class="font-semibold leading-[115%] text-base sm:text-xl md:text-2xl font-Work-Sans mb-[0.5rem] sm:mb-[0.75rem] lg:mb-[1.25rem] text-[#181A2A] dark:bg-[#181A2A] dark:text-white">
+                The Impact of
+                Technology on the
+                Workplace: How
+                Technology is
+                Changing</h3>
+            </div>
+            <div class="flex items-center gap-[1rem] sm:gap-[1.25rem]">
+              <div class="flex items-center gap-[0.5rem] sm:gap-[12px]">
+                <div>
+                  <img src="./assets/images/tracey-wilson.svg" alt="author" class="max-w-[36px] block object-contain">
+                </div>
+                <h5 class="font-normal text-sm md:text-base text-[#97989F] font-Work-Sans">Tracey Wilson</h5>
+              </div>
+              <p class="text-[#97989F] text-sm md:text-base	font-normal	font-Work-Sans">August 20, 2022</p>
+            </div>
+          </a>
+          <a href="./single-post.html"
+            class="max-w-[396px] lg:max-w-[396px] mx-auto p-[0.75rem] sm:p-[1rem] size-full border rounded-[12px]  hover:shadow-2xl hover:border-transparent  transform transition duration-700  dark:bg-[#181A2A] dark:text-white dark:border-[#242535] dark:hover:border-white">
+            <div class="mb-[1rem]">
+              <img src="./assets/images/card2.webp" alt=""
+                class=" lg:max-w-[360px] max-w-[100%] size-full block object-contain h-auto">
+            </div>
+            <div class="p-[0.5rem] flex flex-col items-start dark:bg-[#181A2A] dark:text-white">
+              <p
+                class="text-blue-600 rounded-[6px] bg-slate-100 px-[10px] py-[4px] text-xs sm:text-sm font-Work-Sans	font-medium	leading-5	mb-[8px] sm:mb-[1rem] dark:bg-[#4B6BFB] dark:bg-opacity-[5%]">
+                Technology</p>
+              <h3
+                class="leading-[115%] font-semibold text-base sm:text-xl md:text-2xl font-Work-Sans mb-[0.5rem] sm:mb-[0.75rem] lg:mb-[1.25rem] text-[#181A2A] dark:bg-[#181A2A] dark:text-white">
+                The Impact of
+                Technology on the
+                Workplace: How
+                Technology is
+                Changing</h3>
+            </div>
+            <div class="flex items-center gap-[1rem] sm:gap-[1.25rem]">
+              <div class="flex items-center gap-[0.5rem] sm:gap-[12px]">
+                <div>
+                  <img src="./assets/images/jason.svg" alt="author" class="max-w-[36px] block object-contain">
+                </div>
+                <h5 class="font-normal text-sm md:text-base text-[#97989F] font-Work-Sans">Jason Francisco</h5>
+              </div>
+              <p class="text-[#97989F] text-sm md:text-base	font-normal	font-Work-Sans">August 20, 2022</p>
+            </div>
+          </a>
+          <a href="./single-post.html"
+            class="max-w-[396px] mx-auto p-[0.75rem] sm:p-[1rem] lg:max-w-[396px] size-full border rounded-[12px]  hover:shadow-2xl hover:border-transparent  transform transition duration-700  dark:bg-[#181A2A] dark:text-white dark:border-[#242535] dark:hover:border-white">
+            <div class="mb-[1rem]">
+              <img src="./assets/images/card3.webp" alt=""
+                class=" lg:max-w-[360px] max-w-[100%] size-full block object-contain h-auto">
+            </div>
+            <div class="p-[0.5rem] flex flex-col items-start dark:bg-[#181A2A] dark:text-white">
+              <p
+                class="text-blue-600 rounded-[6px] bg-slate-100 px-[10px] py-[4px] text-xs sm:text-sm font-Work-Sans	font-medium	leading-5	mb-[8px] sm:mb-[1rem] dark:bg-[#4B6BFB] dark:bg-opacity-[5%]">
+                Technology</p>
+              <h3
+                class="leading-[115%] font-semibold text-base sm:text-xl md:text-2xl font-Work-Sans  mb-[0.5rem] sm:mb-[0.75rem] lg:mb-[1.25rem] text-[#181A2A] dark:bg-[#181A2A] dark:text-white">
+                The Impact of
+                Technology on the
+                Workplace: How
+                Technology is
+                Changing</h3>
+            </div>
+            <div class="flex items-center gap-[1rem] sm:gap-[1.25rem]">
+              <div class="flex items-center gap-[0.5rem] sm:gap-[12px]">
+                <div>
+                  <img src="./assets/images/elizabeth.svg" alt="author" class="max-w-[36px] block object-contain">
+                </div>
+                <h5 class="font-normal text-sm md:text-base text-[#97989F] font-Work-Sans">Elizabeth Slavin</h5>
+              </div>
+              <p class="text-[#97989F] text-sm md:text-base	font-normal	font-Work-Sans">August 20, 2022</p>
+            </div>
+          </a>
+          <a href="./single-post.html"
+            class="max-w-[396px] mx-auto p-[0.75rem] sm:p-[1rem] lg:max-w-[396px] size-full border rounded-[12px]  hover:shadow-2xl hover:border-transparent  transform transition duration-700  dark:bg-[#181A2A] dark:text-white dark:border-[#242535] dark:hover:border-white">
+            <div class="mb-[1rem]">
+              <img src="./assets/images/card4.webp" alt=""
+                class=" lg:max-w-[360px] max-w-[100%] size-full block object-contain h-auto">
+            </div>
+            <div class="p-[0.5rem] flex flex-col items-start dark:bg-[#181A2A] dark:text-white">
+              <p
+                class="text-blue-600 rounded-[6px] bg-slate-100 px-[10px] py-[4px] text-xs sm:text-sm font-Work-Sans	font-medium	leading-5	mb-[8px] sm:mb-[1rem] dark:bg-[#4B6BFB] dark:bg-opacity-[5%]">
+                Technology</p>
+              <h3
+                class="leading-[115%] font-semibold text-base sm:text-xl md:text-2xl font-Work-Sans mb-[0.5rem] sm:mb-[0.75rem] lg:mb-[1.25rem] text-[#181A2A] dark:bg-[#181A2A] dark:text-white">
+                The Impact of
+                Technology on the
+                Workplace: How
+                Technology is
+                Changing</h3>
+            </div>
+            <div class="flex items-center gap-[1rem] sm:gap-[1.25rem]">
+              <div class="flex items-center gap-[0.5rem] sm:gap-[12px]">
+                <div>
+                  <img src="./assets/images/ernie.svg" alt="author" class="max-w-[36px] block object-contain">
+                </div>
+                <h5 class="font-normal text-sm md:text-base text-[#97989F] font-Work-Sans">Ernie Smith</h5>
+              </div>
+              <p class="text-[#97989F] text-sm md:text-base	font-normal	font-Work-Sans">August 20, 2022</p>
+            </div>
+          </a>
+          <a href="./single-post.html"
+            class="max-w-[396px] mx-auto p-[0.75rem] sm:p-[1rem] lg:max-w-[396px] size-full border rounded-[12px]  hover:shadow-2xl hover:border-transparent  transform transition duration-700  dark:bg-[#181A2A] dark:text-white dark:border-[#242535] dark:hover:border-white">
+            <div class="mb-[1rem]">
+              <img src="./assets/images/card5.webp" alt=""
+                class=" lg:max-w-[360px] max-w-[100%] size-full block object-contain h-auto">
+            </div>
+            <div class="p-[0.5rem] flex flex-col items-start dark:bg-[#181A2A] dark:text-white">
+              <p
+                class="text-blue-600 rounded-[6px] bg-slate-100 px-[10px] py-[4px] text-xs sm:text-sm font-Work-Sans	font-medium	leading-5	mb-[8px] sm:mb-[1rem] dark:bg-[#4B6BFB] dark:bg-opacity-[5%]">
+                Technology</p>
+              <h3
+                class="leading-[115%] font-semibold text-base sm:text-xl md:text-2xl font-Work-Sans mb-[0.5rem] sm:mb-[0.75rem] lg:mb-[1.25rem] text-[#181A2A] dark:bg-[#181A2A] dark:text-white">
+                The Impact of
+                Technology on the
+                Workplace: How
+                Technology is
+                Changing</h3>
+            </div>
+            <div class="flex items-center gap-[1rem] sm:gap-[1.25rem]">
+              <div class="flex items-center gap-[0.5rem] sm:gap-[12px]">
+                <div>
+                  <img src="./assets/images/eric.svg" alt="author" class="max-w-[36px] block object-contain">
+                </div>
+                <h5 class="font-normal text-sm md:text-base text-[#97989F] font-Work-Sans">Eric Smith</h5>
+              </div>
+              <p class="text-[#97989F] text-sm md:text-base	font-normal	font-Work-Sans">August 20, 2022</p>
+            </div>
+          </a>
+          <a href="./single-post.html"
+            class="max-w-[396px] mx-auto p-[0.75rem] sm:p-[1rem] lg:max-w-[396px] size-full border rounded-[12px]  hover:shadow-2xl hover:border-transparent  transform transition duration-700  dark:bg-[#181A2A] dark:text-white dark:border-[#242535] dark:hover:border-white">
+            <div class="mb-[1rem]">
+              <img src="./assets/images/card6.webp" alt=""
+                class=" lg:max-w-[360px] max-w-[100%] size-full block object-contain h-auto">
+            </div>
+            <div class="p-[0.5rem] flex flex-col items-start dark:bg-[#181A2A] dark:text-white">
+              <p
+                class="text-blue-600 rounded-[6px] bg-slate-100 px-[10px] py-[4px] text-xs sm:text-sm font-Work-Sans	font-medium	leading-5	mb-[8px] sm:mb-[1rem] dark:bg-[#4B6BFB] dark:bg-opacity-[5%]">
+                Technology</p>
+              <h3
+                class="leading-[115%] font-semibold text-base sm:text-xl md:text-2xl font-Work-Sans mb-[0.5rem] sm:mb-[0.75rem] lg:mb-[1.25rem] text-[#181A2A] dark:bg-[#181A2A] dark:text-white">
+                The Impact of
+                Technology on the
+                Workplace: How
+                Technology is
+                Changing</h3>
+            </div>
+            <div class="flex items-center gap-[1rem] sm:gap-[1.25rem]">
+              <div class="flex items-center gap-[0.5rem] sm:gap-[12px]">
+                <div>
+                  <img src="./assets/images/tracey-wilson.svg" alt="author" class="max-w-[36px] block object-contain">
+                </div>
+                <h5 class="font-normal text-sm md:text-base text-[#97989F] font-Work-Sans">Tracey Wilson</h5>
+              </div>
+              <p class="text-[#97989F] text-sm md:text-base	font-normal	font-Work-Sans">August 20, 2022</p>
+            </div>
+          </a>
+          <a href="./single-post.html"
+            class="max-w-[396px] mx-auto p-[0.75rem] sm:p-[1rem] lg:max-w-[396px] size-full border rounded-[12px]  hover:shadow-2xl hover:border-transparent  transform transition duration-700  dark:bg-[#181A2A] dark:text-white dark:border-[#242535] dark:hover:border-white">
+            <div class="mb-[1rem]">
+              <img src="./assets/images/card7.webp" alt=""
+                class=" lg:max-w-[360px] max-w-[100%] size-full block object-contain h-auto">
+            </div>
+            <div class="p-[0.5rem] flex flex-col items-start dark:bg-[#181A2A] dark:text-white">
+              <p
+                class="text-blue-600 rounded-[6px] bg-slate-100 px-[10px] py-[4px] text-xs sm:text-sm font-Work-Sans	font-medium	leading-5	mb-[8px] sm:mb-[1rem] dark:bg-[#4B6BFB] dark:bg-opacity-[5%]">
+                Technology</p>
+              <h3
+                class="leading-[115%] font-semibold text-base sm:text-xl md:text-2xl font-Work-Sans mb-[0.5rem] sm:mb-[0.75rem] lg:mb-[1.25rem] text-[#181A2A] dark:bg-[#181A2A] dark:text-white">
+                The Impact of
+                Technology on the
+                Workplace: How
+                Technology is
+                Changing</h3>
+            </div>
+            <div class="flex items-center gap-[1rem] sm:gap-[1.25rem]">
+              <div class="flex items-center gap-[0.5rem] sm:gap-[12px]">
+                <div>
+                  <img src="./assets/images/jason.svg" alt="author" class="max-w-[36px] block object-contain">
+                </div>
+                <h5 class="font-normal text-sm md:text-base text-[#97989F] font-Work-Sans">Jason Francisco</h5>
+              </div>
+              <p class="text-[#97989F] text-sm md:text-base	font-normal	font-Work-Sans">August 20, 2022</p>
+            </div>
+          </a>
+          <a href="./single-post.html"
+            class="max-w-[396px] mx-auto p-[0.75rem] sm:p-[1rem] lg:max-w-[396px] size-full border rounded-[12px]  hover:shadow-2xl hover:border-transparent  transform transition duration-700  dark:bg-[#181A2A] dark:text-white dark:border-[#242535] dark:hover:border-white">
+            <div class="mb-[1rem]">
+              <img src="./assets/images/card8.webp" alt=""
+                class=" lg:max-w-[360px] max-w-[100%] size-full block object-contain h-auto">
+            </div>
+            <div class="p-[0.5rem] flex flex-col items-start dark:bg-[#181A2A] dark:text-white">
+              <p
+                class="text-blue-600 rounded-[6px] bg-slate-100 px-[10px] py-[4px] text-xs sm:text-sm font-Work-Sans	font-medium	leading-5	mb-[8px] sm:mb-[1rem] dark:bg-[#4B6BFB] dark:bg-opacity-[5%]">
+                Technology</p>
+              <h3
+                class="leading-[115%] font-semibold text-base sm:text-xl md:text-2xl font-Work-Sans mb-[0.5rem] sm:mb-[0.75rem] lg:mb-[1.25rem] text-[#181A2A] dark:bg-[#181A2A] dark:text-white">
+                The Impact of
+                Technology on the
+                Workplace: How
+                Technology is
+                Changing</h3>
+            </div>
+            <div class="flex items-center gap-[1rem] sm:gap-[1.25rem]">
+              <div class="flex items-center gap-[0.5rem] sm:gap-[12px]">
+                <div>
+                  <img src="./assets/images/elizabeth.svg" alt="author" class="max-w-[36px] block object-contain">
+                </div>
+                <h5 class="font-normal text-sm md:text-base text-[#97989F] font-Work-Sans">Elizabeth Slavin</h5>
+              </div>
+              <p class="text-[#97989F] text-sm md:text-base	font-normal	font-Work-Sans">August 20, 2022</p>
+            </div>
+          </a>
+          <a href="./single-post.html"
+            class="max-w-[396px] mx-auto p-[0.75rem] sm:p-[1rem] lg:max-w-[396px] size-full border rounded-[12px]  hover:shadow-2xl hover:border-transparent  transform transition duration-700  dark:bg-[#181A2A] dark:text-white dark:border-[#242535] dark:hover:border-white">
+            <div class="mb-[1rem]">
+              <img src="./assets/images/card9.webp" alt=""
+                class=" lg:max-w-[360px] max-w-[100%] size-full block object-contain h-auto">
+            </div>
+            <div class="p-[0.5rem] flex flex-col items-start dark:bg-[#181A2A] dark:text-white">
+              <p
+                class="text-blue-600 rounded-[6px] bg-slate-100 px-[10px] py-[4px] text-xs sm:text-sm font-Work-Sans	font-medium	leading-5	mb-[8px] sm:mb-[1rem] dark:bg-[#4B6BFB] dark:bg-opacity-[5%]">
+                Technology</p>
+              <h3
+                class="leading-[115%] font-semibold text-base sm:text-xl md:text-2xl font-Work-Sans mb-[0.5rem] sm:mb-[0.75rem] lg:mb-[1.25rem] text-[#181A2A] dark:bg-[#181A2A] dark:text-white">
+                The Impact of
+                Technology on the
+                Workplace: How
+                Technology is
+                Changing</h3>
+            </div>
+            <div class="flex items-center gap-[1rem] sm:gap-[1.25rem]">
+              <div class="flex items-center gap-[0.5rem] sm:gap-[12px]">
+                <div>
+                  <img src="./assets/images/ernie.svg" alt="author" class="max-w-[36px] block object-contain">
+                </div>
+                <h5 class="font-normal text-sm md:text-base text-[#97989F] font-Work-Sans">Ernie Smith</h5>
+              </div>
+              <p class="text-[#97989F] text-sm md:text-base	font-normal	font-Work-Sans">August 20, 2022</p>
+            </div>
+          </a>
+
+        </div>
+        <div class="flex justify-center items-center">
+          <button
+            class="py-[0.75rem] px-[1.25rem] border text-[#696A75] font-Work-Sans font-normal text-base bg-white border-[#696A75] rounded-md transition ease-in-out hover:bg-[#4B6BFB] hover:border-transparent	hover:text-white dark:bg-[#181A2A] dark:hover:text-white dark:hover:border-[#4B6BFB]"
+            id="btn">View
+            All
+            Post</button>
+        </div>
+      </div>
+    </section>
+    <!-- banner sec -->
+    <section>
+      <div class="px-[1rem] max-w-[750px] size-full m-auto mb-[3rem] md:mb-[80px]">
+        <div
+          class="banner flex items-center justify-center border  flex-col p-[15px] bg-secondry rounded-[12px] dark:bg-[#242535] dark:border-none">
+          <p class=" text-xs md:text-sm font-normal leading-5	font-Work-Sans text-[#696A75] ">Advertisement</p>
+          <h3
+            class="text-base sm:text-lg md:text-xl font-semibold leading-5 sm:leading-6	font-Work-Sans text-[#696A75]">
+            You can place ads</h3>
+          <h5 class="text-sm sm:text-base md:text-lg font-normal leading-6 sm:leading-7 font-Work-Sans text-[#696A75]">
+            750x100</h5>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-secondry dark:bg-[#141624] dark:text-white" id="contact">
+      <div class=" max-w-[1250px] size-full px-[1rem] mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-[1.25rem]  py-[3rem] md:py-[4rem] mb-[2rem] ">
+          <div class="order-2 md:order-1">
+            <h3
+              class="text-[#181A2A] text-sm sm:text-bas md:text-lg font-semibold font-jakarta mb-[0.75rem] sm:mb-[1.5rem] dark:text-white">
+              About</h3>
+            <p class="text-[#696A75] font-jakarta font-normal text-sm sm:text-base mb-[1.5rem]">Lorem ipsum dolor sit
+              amet,
+              consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua. Ut enim ad minim veniam</p>
+            <p class="text-sm sm:text-base	font-jakarta font-normal mb-1 text-[#97989F]"><strong
+                class="font-semibold text-black dark:text-white">Email
+                :</strong>
+              info@jstemplate.net</p>
+            <p class="text-sm sm:text-base	font-jakarta font-normal text-[#97989F]"><strong
+                class="font-semibold text-black dark:text-white">Phone
+                :</strong>
+              880 123 456 789
+            </p>
+          </div>
+          <div
+            class="flex flex-row justify-end sm:flex-row sm:items-end md:items-baseline lg:justify-center  gap-[20px] sm:gap-[40px] md:gap-[60px] lg:gap-[80px] order-3 md:order-2">
+            <div>
+              <h3
+                class="text-[#181A2A] text-sm sm:text-bas md:text-lg font-semibold font-jakarta   mb-[0.75rem] sm:mb-[1.5rem] dark:text-white">
+                Quick Link
+              </h3>
+              <ul class="flex flex-col gap-[8px]">
+                <li><a href="./index.html"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Home</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">About</a>
+                </li>
+                <li><a href="./blog.html"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Blog</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Archived</a>
+                </li>
+                <li><a href="./author.html"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Author</a>
+                </li>
+                <li><a href="#contact"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Contact</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                class="text-[#181A2A] text-sm sm:text-bas md:text-lg font-semibold font-jakarta mb-[0.75rem] sm:mb-[1.5rem] dark:text-white">
+                Category</h3>
+              <ul class="flex flex-col gap-[8px]">
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Lifestyle</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Technology</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Travel</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Business</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Economy</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Sports</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <div
+            class="px-[24px] sm:px-[36px] py-[1.25rem] sm:py-[2rem] bg-white rounded-[.75rem] dark:bg-[#242535] col-span-2 md:col-auto	  order-1 md:order-3">
+            <form class="flex justify-center items-center text-center flex-col">
+              <h3 class="mb-[8px] font-Work-Sans text-[#181A2A] font-semibold text-lg sm:text-xl dark:text-white">Weekly
+                Newsletter
+              </h3>
+              <p class="mb-[1.25px] sm:mb-[30px] text-sm sm:text-base font-normal	font-Work-Sans text-[#696A75]">Get
+                blog
+                articles
+                and offers
+                via
+                email</p>
+              <div
+                class="flex  items-center justify-between border px-[1rem] py-[12px] mb-[8px] w-[100%] rounded-[6px] dark:bg-[#242535] dark:text-white">
+                <input type="email" name="" id="" placeholder="Your Email"
+                  class="w-[100%]  outline-none border-none text-xs	 sm:text-base font-normal	font-Work-Sans text-[#696A75] dark:bg-[#242535] dark:text-white">
+                <div class="max-w-[20px] h-auto">
+                  <img src="./assets/images/email.svg" alt="email"
+                    class="max-w-[18px] w-[100%] block object-contain h-auto">
+                </div>
+              </div>
+              <button
+                class="bg-light-blue  w-[100%] py-[12px] text-white  text-base font-normal	font-Work-Sans rounded-[6px] transition ease-in-out hover:bg-[#E8E8EA] hover:text-light-blue">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="relative py-[2rem] border-t border-solid border-[#DCDDDF] dark:border-[#242535]">
+          <div class=" flex items-center justify-between gap-[0.5rem] sm:gap-[1rem] flex-col sm:flex-row ">
+            <a href="#" class="relative flex items-center justify-between gap-[5px] md:gap-[10px] self-start">
+              <div>
+                <img src="./assets/images/logo.svg" alt="logo" class="dark:rounded-[50%]  dark:bg-white">
+              </div>
+              <h3 class="text-xs sm:text-xl">Meta<span class="font-semibold">Blog</span></h3>
+            </a>
+            <ul class="flex items-center sm:mb-[0] mb-[0.5rem]">
+              <li class="px-[0.5rem] sm:px-[1rem] border-r-[1px] sm:border-r-2 border-solid border-[#242535]"><a
+                  href="#" class="text-xs sm:text-base font-normal font-jakarta">Terms of Use </a></li>
+              <li class="px-[0.5rem] sm:px-[1rem] border-r-[1px] sm:border-r-2 border-solid border-[#242535]"><a
+                  href="#" class="text-xs sm:text-base font-normal font-jakarta"> Privacy Policy </a></li>
+              <li class="px-[0.5rem] sm:px-[1rem]"><a href="#" class="text-xs sm:text-base font-normal font-jakarta">
+                  Cookie
+                  Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p
+            class="absolute top-[60px] left-[40px] sm:left-[40px] sm:bottom-[10px] font-jakarta text-xs sm:text-base	font-normal">
+            © JS Template 2023. All
+            Rights
+            Reserved.</p>
+        </div>
+
+      </div>
+    </footer>
+    <!-- scroll to Top  -->
+    <button onclick="topFunction()" title="Go to top"
+      class="fixed bottom-[20px] right-[30px] z-99 p-[5px] rounded-[5px] text-white bg-[#4B6BFB]" id="myBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="size-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+      </svg>
+    </button>
+  </div>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

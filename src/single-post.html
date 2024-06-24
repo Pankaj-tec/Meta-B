@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meta Blogs Template Single Post</title>
+  <!-- google font family link -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    d rel="stylesheet">
+  <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="bg-white dark:bg-[#181A2A]">
+  <div class="dark:bg-[#181A2A] dark:text-white">
+    <header
+      class="max-w-[1250px] size-full px-[1rem]  mx-auto my-[1rem] md:my-[2rem] relative dark:bg-[#181A2A] dark:text-white">
+      <div class=" md:flex-row flex  items-center justify-between gap-1 sm:gap-[1rem] relative">
+        <a href="./index.html"
+          class="self-start flex md:flex justify-center items-center gap-[2px] sm:gap-[10px] font-Work-Sans order-1 md:order-1">
+          <div>
+            <img src="./assets/images/logo.svg" alt="logo"
+              class="max-w-[28px] sm:max-w-[36px] block  h-auto  dark:rounded-[50%]  dark:bg-white">
+          </div>
+          <h3 class="sm:text-xl">Meta<span class="font-semibold">Blog</span></h3>
+        </a>
+        <nav class="order-3  md:order-2">
+          <ul
+            class="navbar gap-[20px] md:gap-[30px] lg:gap-[40px] flex-col flex md:items-center md:justify-between md:flex-row md:nav dark:dark:bg-[#181A2A]"
+            id="menu">
+            <li>
+              <a href="./index.html" class="hover:text-blue-500 font-Work-Sans text-base font-normal">Home</a>
+            </li>
+            <li>
+              <a href="./blog.html" class="hover:text-blue-500 font-Work-Sans text-base font-normal	">Blog</a>
+            </li>
+            <li>
+              <a href="./single-post.html" class="hover:text-blue-500 font-Work-Sans text-base font-normal">Single
+                Post</a>
+            </li>
+            <li>
+              <a href="#post" class="hover:text-blue-500 font-Work-Sans text-base font-normal	">Pages</a>
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-blue-500 font-Work-Sans text-base font-normal">Contact</a>
+            </li>
+            <li>
+              <div
+                class="flex items-center justify-between gap-[4px] sm:gap-[10px] px-[1rem] py-[0.5rem] bg-tertiary-color rounded-[6px] md:hidden">
+                <input type="search" name="" id="" placeholder="search"
+                  class="bg-tertiary-color outline-none border-none text-light-gray text-xs	sm:text-sm	font-normal w-[100%]">
+                <div>
+                  <img src="./assets/images/search-icon.svg" alt="search" class="max-w-[16px] h-auto">
+                </div>
+              </div>
+            </li>
+
+            <!-- close icon  -->
+            <div class=" top-[6px] right-[40px] absolute md:static  hidden cursor-pointer order-5" id="close">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </div>
+          </ul>
+        </nav>
+        <!-- search bar and toggle -->
+        <div
+          class=" flex-grow-[50] md:flex-grow-0  flex justify-end lg:justify-between items-center gap-[4px] sm:gap-[20px] md:gap-[20px] lg:gap-[42px] order-2  md:order-3 ">
+          <div
+            class="md:flex items-center justify-between gap-[4px] sm:gap-[10px] px-[1rem] py-[0.5rem] bg-tertiary-color rounded-[6px] hidden">
+            <input type="search" name="" id="" placeholder="search"
+              class="bg-tertiary-color outline-none border-none text-light-gray text-xs	sm:text-sm	font-normal w-[100%]">
+            <div>
+              <img src="./assets/images/search-icon.svg" alt="search" class="max-w-[16px] h-auto">
+            </div>
+          </div>
+          <div>
+            <label class="relative flex items-center cursor-pointer">
+              <input type="checkbox" value="" class="sr-only peer mode"
+                onclick="(() => document.body.classList.toggle('dark'))()" id="mode">
+              <div
+                class="w-[48px] h-[23px] bg-gray-200 hover:bg-gray-300 peer-focus:outline-0 
+            peer-focus:ring-transparent rounded-full peer transition-all ease-in-out 
+            duration-00 peer-checked:after:translate-x-full peer-checked
+            after:content-[''] after:inline-block :after:absolute after:top-[4px] after:left-[5px]after:
+             after:rounded-full after:h-[24px] after:w-[24px]  after:transition-all after: peer-checked:bg-indigo-600 hover:peer-checked:bg-indigo-700 after:bg-[url('./assets/images/toggle.svg')] after:bg-no-repeat after:bg-cover">
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- bar icon -->
+        <div class="cursor-pointer md:hidden order-4 " id="bar">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <!--Single Post  -->
+    <div class="max-w-[832px] w-[100%] px-[1rem] size-full m-auto mb-[80px]">
+      <div class="flex flex-col items-start">
+        <h3
+          class="bg-blue-600 text-white px-[10px] py-[4px] rounded-[6px] mb-[8px] md:mb-[1.25rem] font-medium text-sm  font-Work-Sans">
+          Technology</h3>
+        <h1
+          class="text-base sm:text-lg md:text-2xl	 lg:text-4xl	font-semibold leading-6 md:leading-8 lg:leading-9  sm:mb-[1rem]	md:mb-[1.5rem] font-Work-Sans">
+          The Impact of Technology on the Workplace: How Technology is Changing
+        </h1>
+        <div class="flex items-center gap-[1.25rem] mb-[1.5rem]  sm:mb-[2rem]">
+          <div class="flex items-center gap-[12px]">
+            <div>
+              <img src="./assets/images/author.svg" alt="author">
+            </div>
+            <h5 class="text-[#97989F] font-medium	sm:text-base font-Work-Sans text-xs	">Jason Francisco</h5>
+          </div>
+          <p class="font-Work-Sans text-xs sm:text-base font-normal text-[#97989F]">August 20, 2022</p>
+        </div>
+      </div>
+      <div class="max-w-[800px]  size-full mb-[1.5rem]  sm:mb-[2rem]">
+        <img src="./assets/images/single-img.webp" alt="single"
+          class="max-w-[800px] w-[100%] h-auto object-contain block">
+      </div>
+      <div>
+        <p
+          class=" mb-[1.5rem]  sm:mb-[2rem] font-normal text-base sm:text-lg md:text-xl leading-[160%] font-Source-Serif dark:text-[#BABABF]">
+          Traveling is an
+          enriching experience that
+          opens up new
+          horizons,
+          exposes us to different
+          cultures, and
+          creates memories that last a lifetime. However, traveling can also be stressful and overwhelming, especially
+          if you don't plan and prepare adequately. In this blog article, we'll explore tips and tricks for a memorable
+          journey and how to make the most of your travels.</p>
+        <p
+          class="mb-[2rem] font-normal	text-base sm:text-lg md:text-xl leading-[160%]	font-Source-Serif dark:text-[#BABABF]">
+          One of the
+          most
+          rewarding aspects of
+          traveling is immersing
+          yourself in
+          the local culture
+          and customs. This
+          includes trying local cuisine, attending cultural events and festivals, and interacting with locals. Learning
+          a few phrases in the local language can also go a long way in making connections and showing respect.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold	text-lg	 sm:text-2xl font-Work-Sans leading-7	">Plan Your Itinerary</h3>
+        <p
+          class=" text-base sm:text-lg md:text-xl	font-normal	leading-[160%] mb-[2rem font-Source-Serif dark:text-[#BABABF]">
+          While it's
+          essential to
+          leave room for
+          spontaneity and
+          unexpected
+          adventures,
+          having a rough itinerary can
+          help you make the most of your time and budget. Identify the must-see sights and experiences and prioritize
+          them according to your interests and preferences. This will help you avoid overscheduling and ensure that you
+          have time to relax and enjoy your journey.</p>
+        <p
+          class="text-base sm:text-lg md:text-xl	font-normal	leading-[160%] mb-[1.5rem]  sm:mb-[2rem] font-Source-Serif dark:text-[#BABABF]">
+          Vitae
+          sapien
+          pellentesque habitant morbi
+          tristique. Luctus
+          venenatis
+          lectus magna fringilla. Nec ullamcorper
+          sit amet risus nullam eget felis. Tincidunt arcu non sodales neque sodales ut etiam sit amet.</p>
+
+      </div>
+      <div class="p-[1.5rem] sm:p-[2rem] bg-[#E8E8EA] rounded-[.75rem] mb-[1.5rem]  sm:mb-[2rem]  dark:bg-[#242535]">
+        <q class="text-base sm:text-lg md:text-xl italic leading-[160%] font-Source-Serif	"> Traveling can expose you to
+          new
+          environments and
+          potential health risks,
+          so it's crucial to take
+          precautions to stay safe and healthy. </q>
+      </div>
+
+      <div class="max-w-[800px] w-[100%] mb-[1.5rem]  sm:mb-[2rem]">
+        <img src="./assets/images/single-post.webp" alt="post img"
+          class="max-w-[800px] w-[100%] h-auto object-contain block">
+      </div>
+      <!-- banner section -->
+      <section>
+        <div class="px-[1rem] max-w-[750px] size-full m-auto mb-[3rem] md:mb-[80px]">
+          <div
+            class="banner flex items-center justify-center border  flex-col p-[15px] bg-secondry rounded-[12px] dark:bg-[#242535] dark:border-none">
+            <p class=" text-xs md:text-sm font-normal leading-5	font-Work-Sans text-[#696A75] ">Advertisement</p>
+            <h3
+              class="text-base sm:text-lg md:text-xl font-semibold leading-5 sm:leading-6	font-Work-Sans text-[#696A75]">
+              You can place ads</h3>
+            <h5
+              class="text-sm sm:text-base md:text-lg font-normal leading-6 sm:leading-7 font-Work-Sans text-[#696A75]">
+              750x100</h5>
+          </div>
+        </div>
+      </section>
+      <!--content section -->
+      <section class="mb-[2rem]">
+        <h3 class="mb-[1rem] font-Work-Sans font-semibold text-lg	 sm:text-2xl">Pack Lightly and Smartly</h3>
+        <p
+          class="text-base sm:text-lg md:text-xl	font-normal	leading-[160%] mb-[1.5rem]  sm:mb-[2rem] font-Source-Serif dark:text-[#BABABF]">
+          Packing
+          can be a
+          daunting task, but with
+          some careful
+          planning and smart choices, you can pack light and
+          efficiently. Start by making a packing list and sticking to it, focusing on versatile and comfortable clothing
+          that can be mixed and matched. Invest in quality luggage and packing organizers to maximize space and minimize
+          wrinkles.</p>
+
+      </section>
+      <section class="mb-[2rem]">
+        <h3 class="mb-[1rem] font-Work-Sans font-semibold text-lg	 sm:text-2xl">Stay Safe and Healthyy</h3>
+        <p
+          class="text-base sm:text-lg md:text-xl	font-normal	leading-[160%] mb-[1.5rem]  sm:mb-[2rem] dark:text-[#BABABF]">
+          Traveling
+          can
+          expose you to
+          new
+          environments and potential
+          health risks, so it's crucial to take precautions to stay safe and healthy. This includes researching any
+          required vaccinations or medications, staying hydrated, washing your hands frequently, and using sunscreen and
+          insect repellent. It's also essential to keep your valuables safe and secure and to be aware of your
+          surroundings at all times.</p>
+      </section>
+      <section class="mb-[2rem]">
+        <h3 class="mb-[1rem] font-Work-Sans font-semibold text-lg	 sm:text-2xl">Stay Safe and Healthyy</h3>
+        <p
+          class=" text-base sm:text-lg md:text-xl font-normal	leading-[160%] mb-[1.5rem]  sm:mb-[2rem] font-Source-Serif dark:text-[#BABABF]">
+          Traveling
+          can expose
+          you to new
+          environments and potential
+          health risks, so it's crucial to take precautions to stay safe and healthy. This includes researching any
+          required vaccinations or medications, staying hydrated, washing your hands frequently, and using sunscreen and
+          insect repellent. It's also essential to keep your valuables safe and secure and to be aware of your
+          surroundings at all times.</p>
+      </section>
+      <section class="mb-[2rem]">
+        <h3 class="mb-[1rem] font-Work-Sans font-semibold text-lg	 sm:text-2xl">Immerse Yourself in the Local Culture
+        </h3>
+        <p
+          class="text-base sm:text-lg md:text-xl	font-normal	leading-[160%] mb-[1.5rem]  sm:mb-[2rem] font-Source-Serif dark:text-[#BABABF]">
+          One of the
+          most
+          rewarding aspects of
+          traveling is immersing
+          yourself in the local culture and customs. This includes trying local cuisine, attending cultural events and
+          festivals, and interacting with locals. Learning a few phrases in the local language can also go a long way in
+          making connections and showing respect.</p>
+      </section>
+      <section class="mb-[2rem]">
+        <h3 class="mb-[1rem] font-Work-Sans font-semibold text-lg	 sm:text-2xl">Capture Memoriese</h3>
+        <p
+          class="text-base sm:text-lg md:text-xl	font-normal	leading-[160%] mb-[1.5rem]  sm:mb-[2rem] font-Source-Serif dark:text-[#BABABF]">
+          Finally,
+          don't forget
+          to capture memories
+          of your journey.
+          Whether it's through photographs, journaling, or souvenirs, preserving the moments and experiences of your
+          travels can bring joy and nostalgia for years to come. However, it's also essential to be present in the
+          moment and not let technology distract you from the beauty of your surroundings.</p>
+      </section>
+      <section>
+        <h3 class="mb-[1rem] font-Work-Sans font-semibold text-lg	 sm:text-2xl">Conclusion:</h3>
+        <p class="text-base sm:text-lg md:text-xl	font-normal	leading-[160%] font-Source-Serif dark:text-[#BABABF]">
+          Traveling is an art
+          form that
+          requires a blend of
+          planning,
+          preparation, and spontaneity. By following these tips and tricks, you can make the most of your journey and
+          create memories that last a lifetime. So pack your bags, embrace the adventure, and enjoy the ride.</p>
+      </section>
+    </div>
+    <!-- footer -->
+    <footer class="bg-secondry dark:bg-[#141624] dark:text-white" id="contact">
+      <div class=" max-w-[1250px] size-full px-[1rem] mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-[1.25rem]  py-[3rem] md:py-[4rem] mb-[1.5rem]  sm:mb-[2rem] ">
+          <div class="order-2 md:order-1">
+            <h3
+              class="text-[#181A2A] text-sm sm:text-bas md:text-lg font-semibold font-jakarta mb-[0.75rem] sm:mb-[1.5rem] dark:text-white">
+              About</h3>
+            <p class="text-[#696A75] font-jakarta font-normal text-sm sm:text-base mb-[1.5rem]">Lorem ipsum dolor sit
+              amet,
+              consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore
+              magna aliqua. Ut enim ad minim veniam</p>
+            <p class="text-sm sm:text-base	font-jakarta font-normal mb-1 text-[#97989F]"><strong
+                class="font-semibold text-black dark:text-white">Email
+                :</strong>
+              info@jstemplate.net</p>
+            <p class="text-sm sm:text-base	font-jakarta font-normal text-[#97989F]"><strong
+                class="font-semibold text-black dark:text-white">Phone
+                :</strong>
+              880 123 456 789
+            </p>
+          </div>
+          <div
+            class="flex flex-row justify-end sm:flex-row sm:items-end md:items-baseline lg:justify-center  gap-[20px] sm:gap-[40px] md:gap-[60px] lg:gap-[80px] order-3 md:order-2">
+            <div>
+              <h3
+                class="text-[#181A2A] text-sm sm:text-bas md:text-lg font-semibold font-jakarta   mb-[0.75rem] sm:mb-[1.5rem] dark:text-white">
+                Quick Link
+              </h3>
+              <ul class="flex flex-col gap-[8px]">
+                <li><a href="./index.html"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Home</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">About</a>
+                </li>
+                <li><a href="./blog.html"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Blog</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Archived</a>
+                </li>
+                <li><a href="./author.html"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Author</a>
+                </li>
+                <li><a href="#contact"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Contact</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                class="text-[#181A2A] text-sm sm:text-bas md:text-lg font-semibold font-jakarta mb-[0.75rem] sm:mb-[1.5rem] dark:text-white">
+                Category</h3>
+              <ul class="flex flex-col gap-[8px]">
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Lifestyle</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Technology</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Travel</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Business</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Economy</a>
+                </li>
+                <li><a href="#"
+                    class="font-normal text-sm sm:text-base font-jakarta text-[#3B3C4A] hover:text-[#4B6BFB]">Sports</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <div
+            class="px-[24px] sm:px-[36px] py-[1.25rem] sm:py-[2rem] bg-white rounded-[.75rem] dark:bg-[#242535] col-span-2 md:col-auto	  order-1 md:order-3">
+            <form class="flex justify-center items-center text-center flex-col">
+              <h3 class="mb-[8px] font-Work-Sans text-[#181A2A] font-semibold text-lg sm:text-xl dark:text-white">Weekly
+                Newsletter
+              </h3>
+              <p class="mb-[1.25px] sm:mb-[30px] text-sm sm:text-base font-normal	font-Work-Sans text-[#696A75]">Get
+                blog
+                articles
+                and offers
+                via
+                email</p>
+              <div
+                class="flex  items-center justify-between border px-[1rem] py-[12px] mb-[8px] w-[100%] rounded-[6px] dark:bg-[#242535] dark:text-white">
+                <input type="email" name="" id="" placeholder="Your Email"
+                  class="w-[100%]  outline-none border-none text-xs	 sm:text-base font-normal	font-Work-Sans text-[#696A75] dark:bg-[#242535] dark:text-white">
+                <div class="max-w-[20px] h-auto">
+                  <img src="./assets/images/email.svg" alt="email"
+                    class="max-w-[18px] w-[100%] block object-contain h-auto">
+                </div>
+              </div>
+              <button
+                class="bg-light-blue  w-[100%] py-[12px] text-white  text-base font-normal	font-Work-Sans rounded-[6px] transition ease-in-out hover:bg-[#E8E8EA] hover:text-light-blue">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="relative py-[2rem] border-t border-solid border-[#DCDDDF] dark:border-[#242535]">
+          <div class=" flex items-center justify-between gap-[0.5rem] sm:gap-[1rem] flex-col sm:flex-row ">
+            <a href="#" class="relative flex items-center justify-between gap-[5px] md:gap-[10px] self-start">
+              <div>
+                <img src="./assets/images/logo.svg" alt="logo" class="dark:rounded-[50%]  dark:bg-white">
+              </div>
+              <h3 class="text-xs sm:text-xl">Meta<span class="font-semibold">Blog</span></h3>
+            </a>
+            <ul class="flex items-center sm:mb-[0] mb-[0.5rem]">
+              <li class="px-[0.5rem] sm:px-[1rem] border-r-[1px] sm:border-r-2 border-solid border-[#242535]"><a
+                  href="#" class="text-xs sm:text-base font-normal font-jakarta">Terms of Use </a></li>
+              <li class="px-[0.5rem] sm:px-[1rem] border-r-[1px] sm:border-r-2 border-solid border-[#242535]"><a
+                  href="#" class="text-xs sm:text-base font-normal font-jakarta"> Privacy Policy </a></li>
+              <li class="px-[0.5rem] sm:px-[1rem]"><a href="#" class="text-xs sm:text-base font-normal font-jakarta">
+                  Cookie
+                  Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p
+            class="absolute top-[60px] left-[40px] sm:left-[40px] sm:bottom-[10px] font-jakarta text-xs sm:text-base	font-normal">
+            © JS Template 2023. All
+            Rights
+            Reserved.</p>
+        </div>
+
+      </div>
+    </footer>
+    <!-- scroll to Top  -->
+    <button onclick="topFunction()" title="Go to top"
+      class="fixed bottom-[20px] right-[30px] z-99 p-[5px] rounded-[5px] text-white bg-[#4B6BFB]" id="myBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="size-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+      </svg>
+    </button>
+  </div>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

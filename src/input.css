@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+nav {
+  white-space: nowrap;
+}
+
+body.dark {
+  background: #181a2a;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 0;
+    max-width: 300px;
+    height: 100vh;
+    padding: 2.5rem;
+    right: -300px;
+    align-items: flex-end;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 2px 2px 2px 2px #181a2a;
+    transition: 0.5s ease-in-out;
+  }
+  .navbar.active {
+    top: 0;
+    right: 0px;
+    width: 100%;
+  }
+  .navbar li {
+    margin-top: 10px;
+  }
+}
